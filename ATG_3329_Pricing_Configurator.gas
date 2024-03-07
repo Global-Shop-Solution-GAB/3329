@@ -1,0 +1,1159 @@
+Program.Sub.ScreenSU.Start
+gui.F_PrConfig..create
+gui.F_PrConfig..caption("Pricing Configurator")
+gui.F_PrConfig..size(14970,7665)
+gui.F_PrConfig..position(0,0)
+gui.F_PrConfig..event(unload,unload)
+gui.F_PrConfig..alwaysontop(False)
+gui.F_PrConfig..fontname("Arial")
+gui.F_PrConfig..fontsize(8)
+gui.F_PrConfig..forecolor(0)
+gui.F_PrConfig..fontstyle(,,,,)
+gui.F_PrConfig..BackColor(-2147483633)
+gui.F_PrConfig..controlbox(True)
+gui.F_PrConfig..maxbutton(False)
+gui.F_PrConfig..minbutton(True)
+gui.F_PrConfig..mousepointer(0)
+gui.F_PrConfig..moveable(True)
+gui.F_PrConfig..sizeable(False)
+gui.F_PrConfig..ShowInTaskBar(True)
+gui.F_PrConfig..titlebar(True)
+gui.F_PrConfig.FrmPartInfo.create(frame)
+gui.F_PrConfig.FrmPartInfo.caption("Frame")
+gui.F_PrConfig.FrmPartInfo.size(10965,300)
+gui.F_PrConfig.FrmPartInfo.position(200,200)
+gui.F_PrConfig.FrmPartInfo.visible(True)
+gui.F_PrConfig.FrmPartInfo.borderstyle(0)
+gui.F_PrConfig.FrmPartInfo.fontname("Arial")
+gui.F_PrConfig.FrmPartInfo.fontsize(8)
+gui.F_PrConfig.frmTotal.create(frame)
+gui.F_PrConfig.frmTotal.caption("Frame")
+gui.F_PrConfig.frmTotal.size(2000,405)
+gui.F_PrConfig.frmTotal.position(9355,5915)
+gui.F_PrConfig.frmTotal.visible(True)
+gui.F_PrConfig.frmTotal.borderstyle(0)
+gui.F_PrConfig.frmTotal.fontname("Arial")
+gui.F_PrConfig.frmTotal.fontsize(8)
+gui.F_PrConfig.frmCmd.create(frame)
+gui.F_PrConfig.frmCmd.caption("Frame")
+gui.F_PrConfig.frmCmd.size(2100,480)
+gui.F_PrConfig.frmCmd.position(200,6600)
+gui.F_PrConfig.frmCmd.visible(True)
+gui.F_PrConfig.frmCmd.borderstyle(0)
+gui.F_PrConfig.frmCmd.fontname("Arial")
+gui.F_PrConfig.frmCmd.fontsize(8)
+gui.F_PrConfig.fraGrpTot.create(frame)
+gui.F_PrConfig.fraGrpTot.caption("Frame")
+gui.F_PrConfig.fraGrpTot.size(2925,700)
+gui.F_PrConfig.fraGrpTot.position(11700,5915)
+gui.F_PrConfig.fraGrpTot.visible(True)
+gui.F_PrConfig.fraGrpTot.borderstyle(0)
+gui.F_PrConfig.fraGrpTot.fontname("Arial")
+gui.F_PrConfig.fraGrpTot.fontsize(8)
+gui.F_PrConfig.lblQuote.create(label,"Quote",True,500,255,1,0,0,True,0,Arial,8,-2147483633,0)
+gui.F_PrConfig.lblQuote.parent("frmpartinfo")
+gui.F_PrConfig.lblLine.create(label,"Line",True,500,255,1,2000,0,True,0,Arial,8,-2147483633,0)
+gui.F_PrConfig.lblLine.parent("frmpartinfo")
+gui.F_PrConfig.lblQNO.create(label,"",True,1200,255,1,500,0,True,0,Arial,8,-2147483633,0)
+gui.F_PrConfig.lblQNO.parent("frmpartinfo")
+gui.F_PrConfig.lblLNO.create(label,"",True,1200,255,1,2500,0,True,0,Arial,8,-2147483633,0)
+gui.F_PrConfig.lblLNO.parent("frmpartinfo")
+gui.F_PrConfig.lblPart.create(label,"Part",True,500,255,1,4000,0,True,0,Arial,8,-2147483633,0)
+gui.F_PrConfig.lblPart.parent("frmpartinfo")
+gui.F_PrConfig.lblPNO.create(label,"",True,5885,255,1,4500,0,True,0,Arial,8,-2147483633,0)
+gui.F_PrConfig.lblPNO.parent("frmpartinfo")
+gui.F_PrConfig.gsfgConfig.create(gsflexgrid)
+gui.F_PrConfig.gsfgConfig.FixedRows(0)
+gui.F_PrConfig.gsfgConfig.FixedCols(0)
+gui.F_PrConfig.gsfgConfig.visible(True)
+gui.F_PrConfig.gsfgConfig.size(11180,5265)
+gui.F_PrConfig.gsfgConfig.zorder(0)
+gui.F_PrConfig.gsfgConfig.position(200,600)
+gui.F_PrConfig.gsfgConfig.enabled(True)
+gui.F_PrConfig.gsfgConfig.event(posttextmatrix,gsfgconfig_posttextmatrix)
+gui.F_PrConfig.gsfgConfig.event(cellenter,gsfgconfig_cellenter)
+gui.F_PrConfig.gsfgConfig.event(cellexit,gsfgconfig_cellexit)
+gui.F_PrConfig.lblTotal.create(label,"Total",True,420,255,1,0,0,True,0,Arial,8,-2147483633,0)
+gui.F_PrConfig.lblTotal.parent("frmtotal")
+gui.F_PrConfig.cmdSave.create(button)
+gui.F_PrConfig.cmdSave.caption("Save")
+gui.F_PrConfig.cmdSave.visible(True)
+gui.F_PrConfig.cmdSave.size(1000,375)
+gui.F_PrConfig.cmdSave.zorder(0)
+gui.F_PrConfig.cmdSave.position(0,0)
+gui.F_PrConfig.cmdSave.enabled(True)
+gui.F_PrConfig.cmdSave.parent("frmcmd")
+gui.F_PrConfig.cmdSave.fontname("Arial")
+gui.F_PrConfig.cmdSave.fontsize(8)
+gui.F_PrConfig.cmdSave.event(click,cmdsave_click)
+gui.F_PrConfig.cmdCalc.create(button)
+gui.F_PrConfig.cmdCalc.caption("Calculate")
+gui.F_PrConfig.cmdCalc.visible(True)
+gui.F_PrConfig.cmdCalc.size(1000,375)
+gui.F_PrConfig.cmdCalc.zorder(0)
+gui.F_PrConfig.cmdCalc.position(2100,0)
+gui.F_PrConfig.cmdCalc.enabled(True)
+gui.F_PrConfig.cmdCalc.parent("frmcmd")
+gui.F_PrConfig.cmdCalc.fontname("Arial")
+gui.F_PrConfig.cmdCalc.fontsize(8)
+gui.F_PrConfig.cmdPrint.create(button)
+gui.F_PrConfig.cmdPrint.caption("Export")
+gui.F_PrConfig.cmdPrint.visible(True)
+gui.F_PrConfig.cmdPrint.size(1000,375)
+gui.F_PrConfig.cmdPrint.zorder(0)
+gui.F_PrConfig.cmdPrint.position(1050,0)
+gui.F_PrConfig.cmdPrint.enabled(True)
+gui.F_PrConfig.cmdPrint.parent("frmcmd")
+gui.F_PrConfig.cmdPrint.fontname("Arial")
+gui.F_PrConfig.cmdPrint.fontsize(8)
+gui.F_PrConfig.cmdPrint.event(click,cmdprint_click)
+gui.F_PrConfig.gsfgGroup.create(gsflexgrid)
+gui.F_PrConfig.gsfgGroup.FixedRows(0)
+gui.F_PrConfig.gsfgGroup.FixedCols(0)
+gui.F_PrConfig.gsfgGroup.visible(True)
+gui.F_PrConfig.gsfgGroup.size(2925,5265)
+gui.F_PrConfig.gsfgGroup.zorder(0)
+gui.F_PrConfig.gsfgGroup.position(11700,600)
+gui.F_PrConfig.gsfgGroup.enabled(True)
+gui.F_PrConfig.lblGrpTot.create(label,"0",True,1200,225,1,1500,0,True,1,Arial,8,-2147483633,0)
+gui.F_PrConfig.lblGrpTot.parent("fragrptot")
+gui.F_PrConfig.lblGP.create(label,"GP",True,495,225,1,600,300,True,1,Arial,8,-2147483633,0)
+gui.F_PrConfig.lblGP.parent("fragrptot")
+gui.F_PrConfig.lblGPTOT.create(label,"0",True,1200,225,1,1500,300,True,1,Arial,8,-2147483633,0)
+gui.F_PrConfig.lblGPTOT.parent("fragrptot")
+gui.F_PrConfig.lblTot.create(label,"0",True,1200,255,1,700,0,True,1,Arial,8,-2147483633,0)
+gui.F_PrConfig.lblTot.parent("frmtotal")
+
+
+
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+
+Variable.Global.bIsInGroup.Declare(Boolean,False)
+Variable.UDT.uConfigurator.Define("sDescription",String)
+Variable.UDT.uConfigurator.Define("sDistCost",String)
+Variable.UDT.uConfigurator.Define("sExtended1",String)
+Variable.UDT.uConfigurator.Define("sExtended2",String)
+Variable.UDT.uConfigurator.Define("sLevel",String)
+Variable.UDT.uConfigurator.Define("sMarkUp",String)
+Variable.UDT.uConfigurator.Define("sPart",String)
+Variable.UDT.uConfigurator.Define("sSubTot",String)
+Variable.UDT.uConfigurator.Define("sUM",String)
+Variable.UDT.uConfigurator.Define("sSource",String)
+Variable.UDT.uConfigurator.Define("iLVLNO",Long)
+Variable.UDT.uConfigurator.Define("iQty",Float)
+Variable.Global.sPart.Declare(String)
+Variable.uGlobal.uConfigurator.Declare("uConfigurator")
+Variable.Global.sQuote.Declare(String)
+Variable.Global.sLine.Declare(String)
+Variable.Global.sMFGComps.Declare(String)
+Variable.Global.fTotal.Declare(Float,0.00)
+Variable.UDT.uApprovers.Define("fPurchCost",Float)
+Variable.UDT.uApprovers.Define("fExtended",Float)
+Variable.uGlobal.uApprovers.Declare("uApprovers")
+Variable.Global.fExtended.Declare(Float,0)
+Program.Sub.Preflight.End
+
+
+Program.Sub.Main.Start
+'Coder: CHANDANA
+'Quote Number: 4046
+'Customer Name: Accurate Control Co LLC
+'Reference Number: ACC730-82720120909-0
+'Title: Pricing Configurator - Accurate control
+'Description: This script will build a flex grid from BOM part details and calculate Gross Profit.
+
+V.Local.sError.Declare(String)
+V.Local.sMsg.Declare
+V.Local.sSql.Declare
+
+F.Intrinsic.Control.SetErrorHandler("Main_Err")
+F.Intrinsic.Control.ClearErrors
+
+F.Intrinsic.Control.If(V.Caller.Switches,=,"O")
+
+	F.Intrinsic.Control.If(V.Caller.Hook,=,10260)
+		V.Passed.000201.Set("Estimate")
+		F.Intrinsic.Control.End
+	F.Intrinsic.Control.Else
+		F.Intrinsic.Control.CallSub(Buildstyle)
+		F.Global.Security.IsInGroup(V.Caller.User,"QTE APPR",V.Global.bIsInGroup)
+		F.Intrinsic.Control.If(V.Global.bIsInGroup,=,True)
+			Gui.F_PrConfig..Size(14850,7665)
+		F.Intrinsic.Control.Else
+			Gui.F_PrConfig..Size(11700,7665)
+		F.Intrinsic.Control.EndIf
+		'Quote
+		F.Intrinsic.String.LPad(V.Passed.000060,"0",7,V.Global.sQuote)
+		Gui.F_PrConfig.lblQNO.Caption(V.Global.sQuote)
+		'line
+		F.Intrinsic.String.LPad(V.Passed.000051,"0",4,V.Global.sLine)
+		Gui.F_PrConfig.lblLNO.Caption(V.Global.sLine)
+		'Part
+		V.Global.sPart.Set(V.Passed.000052)
+		F.Intrinsic.Control.If(V.Global.sPart.Trim,=,"")
+			F.Intrinsic.ui.Msgbox("Select a Quote Line. ","Pricing Configurator")
+			F.Intrinsic.Control.End
+		F.Intrinsic.Control.EndIf
+		F.Intrinsic.String.RPad(V.Global.sPart," ",17,V.Global.sPart)
+		F.Intrinsic.String.Concat(V.Global.sPart,V.Passed.000053,V.Global.sPart)
+		Gui.F_PrConfig.lblPNO.Caption(V.Global.sPart)
+		'Open DB Connection
+		F.ODBC.Connection!Con.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)
+		'Check If the selected Part has a BOM
+		F.Intrinsic.String.Concat("select * from BOM_MSTR where parent = '",V.Global.sPart,"'",V.Local.sSql)
+		F.ODBC.Connection!Con.OpenLocalRecordsetRO("rst",V.Local.sSql)
+		F.Intrinsic.Control.If(V.ODBC.Con!rst.EOF,=,True)
+			F.Intrinsic.String.Concat(V.Ambient.DblQuote,V.Global.sPart.Trim,V.Ambient.DblQuote," Does not have a BOM associated to it.",V.Ambient.NewLine,"Please Create a BOM to use it with the Configurator.",V.Local.sMsg)
+			F.Intrinsic.UI.Msgbox(V.Local.sMsg,"Pricing Configurator")
+			F.Intrinsic.Control.End
+		F.Intrinsic.Control.EndIf
+		F.ODBC.Con!rst.Close
+		F.Intrinsic.Control.CallSub(Gen_config)
+		Gui.F_PrConfig..Show
+	F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Else
+	F.Intrinsic.Control.End
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Main_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: ATG_Pricing_Configurator.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.Main.End
+
+
+program.sub.unload.start
+V.Local.sError.Declare(String)
+
+F.Intrinsic.Control.SetErrorHandler("unload_Err")
+F.Intrinsic.Control.ClearErrors
+
+F.Intrinsic.Control.End
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("unload_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: ATG_Pricing_Configurator.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.unload.end
+
+
+Program.Sub.BuildStyle.Start
+V.Local.sError.Declare(String)
+V.Local.iCt.Declare
+V.Local.sAlign.Declare
+V.Local.sLocked.Declare
+V.Local.sTitles.Declare
+
+F.Intrinsic.Control.SetErrorHandler("BuildStyle_Err")
+F.Intrinsic.Control.ClearErrors
+
+'---### Pricing Configurator ###---
+Gui.F_PrConfig.gsfgConfig.Cols(12)
+Gui.F_PrConfig.gsfgConfig.Rows(2)
+
+Gui.F_PrConfig.gsfgConfig.SetColumnPercentages(".075:.19:.215:.03:.04:.10:.09:.09:.07:.098:.0:.0")
+
+'Header Row Style
+F.Intrinsic.String.Split("Level*!*Part Number*!*Description*!*UM*!*Qty*!*Dist Cost*!*Extended 1*!*Subtotal*!*Markup %*!*Extended 2*!*Source*!*Level#","*!*",V.Local.sTitles)
+F.Intrinsic.Control.For(V.Local.iCt,0,11,1)
+	Gui.F_PrConfig.gsfgConfig.TextMatrix(V.Local.iCt,0,V.Local.sTitles(v.Local.iCt))
+	Gui.F_PrConfig.gsfgConfig.BuildStyle(1,V.Local.iCt,"Type","locked","True")
+	Gui.F_PrConfig.gsfgConfig.BuildStyle(1,V.Local.iCt,"Format","Alignment","2")
+F.Intrinsic.Control.Next(V.Local.iCt)
+Gui.F_PrConfig.gsfgConfig.ApplyStyle(0,1)
+Gui.F_PrConfig.gsfgConfig.FixedRows(1)
+'Style 2- For Children
+F.Intrinsic.String.Split("6*!*2*!*2*!*2*!*6*!*6*!*6*!*6*!*6*!*6*!*2*!*2","*!*",V.Local.sAlign)
+F.Intrinsic.Control.For(V.Local.iCt,0,11,1)
+	Gui.F_PrConfig.gsfgConfig.BuildStyle(2,V.Local.iCt,"Type","locked","True")
+	Gui.F_PrConfig.gsfgConfig.BuildStyle(2,V.Local.iCt,"Format","Alignment",V.Local.sAlign(v.Local.iCt))
+F.Intrinsic.Control.Next(V.Local.iCt)
+Gui.F_PrConfig.gsfgConfig.BuildStyle(2,7,"Color","Back",V.Color.LtGray)
+Gui.F_PrConfig.gsfgConfig.BuildStyle(2,8,"Color","Back",V.Color.LtGray)
+Gui.F_PrConfig.gsfgConfig.BuildStyle(2,9,"Color","Back",V.Color.LtGray)
+'Style 3- For Level Manufactured Components
+F.Intrinsic.String.Split("6*!*2*!*2*!*2*!*6*!*6*!*6*!*6*!*6*!*6*!*2*!*2","*!*",V.Local.sAlign)
+F.Intrinsic.String.Split("True*!*True*!*True*!*True*!*True*!*True*!*True*!*True*!*False*!*False*!*True*!*True","*!*",V.Local.sLocked)
+F.Intrinsic.Control.For(V.Local.iCt,0,11,1)
+	Gui.F_PrConfig.gsfgConfig.BuildStyle(3,V.Local.iCt,"Type","locked",V.Local.sLocked(v.Local.iCt))
+	Gui.F_PrConfig.gsfgConfig.BuildStyle(3,V.Local.iCt,"Format","Alignment",V.Local.sAlign(v.Local.iCt))
+F.Intrinsic.Control.Next(V.Local.iCt)
+Gui.F_PrConfig.gsfgConfig.BuildStyle(3,7,"Color","Back",V.Color.White)
+Gui.F_PrConfig.gsfgConfig.BuildStyle(3,8,"Color","Back",V.Color.Yellow)
+Gui.F_PrConfig.gsfgConfig.BuildStyle(3,9,"Color","Back",V.Color.LtGreen)
+
+'---### Group Info ###---
+Gui.F_PrConfig.gsfgGroup.Cols(2)
+Gui.F_PrConfig.gsfgGroup.Rows(2)
+
+Gui.F_PrConfig.gsfgGroup.SetColumnPercentages(".5:.5")
+
+F.Intrinsic.String.Split("Purch Cost*!*Extended","*!*",V.Local.sTitles)
+F.Intrinsic.Control.For(V.Local.iCt,0,1,1)
+	Gui.F_PrConfig.gsfgGroup.TextMatrix(V.Local.iCt,0,V.Local.sTitles(v.Local.iCt))
+	'style for header row
+	Gui.F_PrConfig.gsfgGroup.BuildStyle(1,V.Local.iCt,"Type","locked","True")
+	Gui.F_PrConfig.gsfgGroup.BuildStyle(1,V.Local.iCt,"Format","Alignment","2")
+	'Style for Non-header row
+	Gui.F_PrConfig.gsfgGroup.BuildStyle(2,V.Local.iCt,"Type","locked","True")
+	Gui.F_PrConfig.gsfgGroup.BuildStyle(2,V.Local.iCt,"Format","Alignment","6")
+	Gui.F_PrConfig.gsfgGroup.BuildStyle(2,V.Local.iCt,"Color","Back",V.Color.White)
+	'Style for row selected.
+	Gui.F_PrConfig.gsfgGroup.BuildStyle(3,V.Local.iCt,"Type","locked","True")
+	Gui.F_PrConfig.gsfgGroup.BuildStyle(3,V.Local.iCt,"Format","Alignment","6")
+	Gui.F_PrConfig.gsfgGroup.BuildStyle(3,V.Local.iCt,"Color","Back",V.Color.GSS)
+F.Intrinsic.Control.Next(V.Local.iCt)
+Gui.F_PrConfig.gsfgGroup.ApplyStyle(0,1)
+Gui.F_PrConfig.gsfgGroup.FixedRows(1)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("BuildStyle_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: ATG_Pricing_Configurator.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.BuildStyle.End
+
+
+program.sub.cmdsave_click.start
+V.Local.sError.Declare(String)
+V.Local.iCt.Declare
+V.Local.iRows.Declare
+V.Local.sMarkUp.Declare
+V.Local.sRet.Declare
+V.Local.sSql.Declare
+
+F.Intrinsic.Control.SetErrorHandler("cmdsave_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+F.Intrinsic.UI.InvokeWaitDialog("Saving . . . .","Pricing Configurator")
+
+Gui.F_PrConfig.gsfgConfig.Commit
+
+'Deleting Markups for selected Quote -Line
+F.Intrinsic.Debug.SetLA("Deleting all Markups from ATG_3329_QTE_PRCNG_MARKUP")
+F.Intrinsic.String.Concat("Delete from ATG_3329_QTE_PRCNG_MARKUP where Quote_No = '",V.Global.sQuote,"' and Line = '",V.Global.sLine,"'",V.Local.sSql)
+F.ODBC.Connection!Con.Execute(V.Local.sSql)
+
+'Save Markups to ATG_3329_QTE_PRCNG_MARKUP
+F.Intrinsic.Debug.SetLA("Save Markups to ATG_3329_QTE_PRCNG_MARKUP")
+V.Local.iRows.Set(V.Screen.F_PrConfig!gsfgConfig.Rows)
+F.Intrinsic.Math.Sub(V.Local.iRows,1,V.Local.iRows)
+F.Intrinsic.Control.For(V.Local.iCt,1,V.Local.iRows,1)
+	Gui.F_PrConfig.gsfgConfig.ReadRow(V.Local.iCt,V.Local.sRet)
+	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+	'Save Markup% if Part is MFG Comp
+	F.Intrinsic.Control.If(V.Local.sRet(10).Left1,=,"M")
+		F.Intrinsic.String.Concat("select * from ATG_3329_QTE_PRCNG_MARKUP where Quote_No = '",V.Global.sQuote,"' and Line = '",V.Global.sLine,"' and Parent = '",V.Global.sPart,"' and Part = '",V.Local.sRet(1),"' and Row='",V.Local.iCt,"'",V.Local.sSql)
+		F.ODBC.Connection!Con.OpenLocalRecordsetRW("rstQPM",V.Local.sSql)
+		F.Intrinsic.Control.If(V.ODBC.Con!rstQPM.EOF,=,True)
+			F.ODBC.Con!rstQPM.AddNew
+			F.ODBC.Con!rstQPM.Set!Quote_No(V.Global.sQuote)
+			F.ODBC.Con!rstQPM.Set!Line(V.Global.sLine)
+			F.ODBC.Con!rstQPM.Set!Parent(V.Global.sPart)
+			F.ODBC.Con!rstQPM.Set!Part(V.Local.sRet(1))
+			F.ODBC.Con!rstQPM.Set!Row(V.Local.iCt)
+			F.Intrinsic.string.Replace(V.Local.sRet(8).Trim,"%","",V.Local.sMarkUp)
+			F.Intrinsic.Control.If(V.Local.sMarkUp,=,"")
+				V.Local.sMarkUp.Set(30)
+			F.Intrinsic.Control.EndIf
+			F.ODBC.Con!rstQPM.Set!MarkUps(V.Local.sMarkUp)
+			F.ODBC.Con!rstQPM.Update
+		F.Intrinsic.Control.EndIf
+		F.ODBC.Con!rstQPM.Close
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Next(V.Local.iCt)
+
+'Save # of lines to ATG_3329_QTE_PRCNG_CONFIG
+F.Intrinsic.Debug.SetLA("Save # of lines to ATG_3329_QTE_PRCNG_CONFIG")
+F.Intrinsic.String.Concat("select * from ATG_3329_QTE_PRCNG_CONFIG where Quote_No = '",V.Global.sQuote,"' and Line = '",V.Global.sLine,"'",V.Local.sSql)
+F.ODBC.Connection!Con.OpenLocalRecordsetRW("rstQPC",V.Local.sSql)
+F.Intrinsic.Control.If(V.ODBC.Con!rstQPC.EOF,=,True)
+	F.ODBC.Con!rstQPC.AddNew
+	F.ODBC.Con!rstQPC.Set!Quote_No(V.Global.sQuote)
+	F.ODBC.Con!rstQPC.Set!Line(V.Global.sLine)
+F.Intrinsic.Control.EndIf
+F.ODBC.Con!rstQPC.Set!Parent(V.Global.sPart)
+F.ODBC.Con!rstQPC.Set!Total_Rows(V.Local.iRows)
+F.ODBC.Con!rstQPC.Update
+F.ODBC.Con!rstQPC.Close
+
+'set total to UF1 & Price Cols
+V.Passed.000030.Set(V.Global.fTotal)
+V.Passed.000009.Set(V.Global.fTotal)
+
+F.Intrinsic.UI.CloseWaitDialog
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdsave_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: ATG_Pricing_Configurator.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmdsave_click.end
+
+
+program.sub.cmdprint_click.start
+V.Local.sError.Declare(String)
+V.Local.bPresent.Declare
+V.Local.iType.Declare(Long,1)
+V.Local.sFilePath.Declare
+V.Local.sMsg.Declare
+V.Local.sTimeStamp.Declare
+V.Local.iRow.Declare
+
+F.Intrinsic.Control.SetErrorHandler("cmdprint_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+F.Intrinsic.UI.InvokeWaitDialog("Exporting . . . .","Pricing Configurator")
+
+F.Intrinsic.Debug.SetLA("Checking for Excel")
+F.Automation.MSExcel.CheckPresence(V.Local.bPresent)
+
+F.Intrinsic.Control.If(V.Local.bPresent,=,False)
+	F.Intrinsic.Debug.SetLA("Excel can't be found; Checking for OOcalc")
+	F.Automation.OOGeneral.CheckPresence(V.Local.bPresent)
+	F.Intrinsic.Control.If(V.Local.bPresent,=,False)
+		F.Intrinsic.String.Concat("Spread Sheet Cannot be opened on this machine.",V.Ambient.NewLine,"Please Install MS Excel or Open Office.",V.Local.sMsg)
+		F.Intrinsic.UI.Msgbox(V.Local.sMsg,"Pricing Configurator")
+		F.Intrinsic.Ui.CloseWaitDialog
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.EndIf
+	V.Local.iType.Set(0)
+F.Intrinsic.Control.EndIf
+V.Local.sTimeStamp.Set(V.Ambient.Now)
+F.Intrinsic.String.Concat(V.Caller.FilesDir,"\Pricing Configurator\",V.Global.sQuote,"-",V.Global.sLine,"-",V.Local.sTimeStamp.Formatmmddyyyyhhnnss,".xls",V.Local.sFilePath)
+Gui.F_PrConfig.gsfgConfig.Export(V.Local.sFilePath,V.Local.iType,"0:1:2:3:4:5:6:7:8:9")
+
+'Write total to the SpreadSheet
+F.Intrinsic.Math.Add(V.Screen.F_PrConfig!gsfgConfig.Rows,2,V.Local.iRow)
+F.Intrinsic.Control.If(V.Local.iType,=,0)
+F.Intrinsic.Control.ElseIf(V.Local.iType,=,1)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.UI.CloseWaitDialog
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdprint_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: ATG_Pricing_Configurator.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Debug.SetLA(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmdprint_click.end
+
+
+Program.Sub.Gen_Config.Start
+V.Local.sError.Declare(String)
+V.Local.bLabor.Declare
+V.Local.fExtended.Declare(Float)
+V.Local.fExtended1.Declare(Float)
+V.Local.iBOMLine.Declare
+V.Local.iLevel.Declare
+V.Local.iLimit.Declare
+V.Local.iQty.Declare
+V.Local.iRow.Declare(Long,0)
+V.Local.sBOM.Declare
+V.Local.sChild.Declare
+V.Local.sFile.Declare
+V.Local.sFilePath.Declare
+V.Local.sLevel.Declare
+V.Local.spart.Declare
+V.Local.sSql.Declare
+
+F.Intrinsic.Control.SetErrorHandler("Gen_Config_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.uGlobal.uConfigurator.Redim(-1,-1)
+V.uGlobal.uApprovers.Redim(-1,-1)
+F.Intrinsic.String.Concat(V.System.Temp,"\BOM",V.Caller.Terminal,".txt",V.Local.sFilePath)
+F.Intrinsic.String.Concat("0",V.Ambient.Tab,V.Global.sPart,V.Ambient.Tab,V.Local.sFilePath,V.Local.sFile)
+F.Intrinsic.File.String2File(V.Local.sFilePath,V.Local.sFile)
+F.Intrinsic.Debug.SetLA("Exploding BOM")
+F.Global.General.CallWrapperSync(410000,V.Local.sFilePath)
+F.Intrinsic.File.File2String(V.Local.sFilePath,V.Local.sFile)
+F.Intrinsic.String.Split(V.Local.sFile,V.Ambient.NewLine,V.Local.sFile)
+F.Intrinsic.String.Split(V.Local.sFile,V.Ambient.Tab,V.Local.sFile)
+F.Intrinsic.File.File2String(V.Local.sFile(3).Trim,V.Local.sBOM)
+F.Intrinsic.String.Split(V.Local.sBOM,V.Ambient.NewLine,V.Local.sBOM)
+
+F.Intrinsic.Debug.SetLA("Loading UDT with Configurator info . . .")
+V.uGlobal.uConfigurator.Redim(0,0)
+V.uGlobal.uApprovers.Redim(0,0)
+F.Intrinsic.Math.Sub(V.Local.sBOM.UBound,1,V.Local.ilimit)
+
+F.Intrinsic.Control.For(V.Local.iBOMLine,8,V.Local.iLimit,1)
+	F.Intrinsic.Control.If(V.Local.iRow,>,0)
+		V.uGlobal.uConfigurator.RedimPreserve(0,V.Local.iRow)
+		V.uGlobal.uApprovers.RedimPreserve(0,V.Local.iRow)
+	F.Intrinsic.Control.EndIf
+	F.Intrinsic.String.Split(V.Local.sBOM(v.Local.iBOMLine),"|~|",V.Local.sChild)
+	F.Intrinsic.string.Left(V.Local.sChild(1).Trim,1,V.Local.iLevel)
+	V.uGlobal.uConfigurator(v.Local.iRow)!sLevel.Set(V.Local.sChild(1))
+	V.uGlobal.uConfigurator(v.Local.iRow)!sPart.Set(V.Local.sChild(2))
+	V.uGlobal.uConfigurator(v.Local.iRow)!sDescription.Set(V.Local.sChild(3))
+	V.uGlobal.uConfigurator(v.Local.iRow)!iLVLNO.Set(V.Local.iLevel)
+	'UM, Qty
+	F.Intrinsic.String.Concat("Select Quantity, UM_Inventory from BOM_MSTR where part= '",V.Local.sChild(2),"' and parent= '",V.Local.sChild(12),"'",V.Local.sSql)
+	F.ODBC.Connection!Con.OpenLocalRecordsetRO("rstBOM",V.Local.sSql)
+	F.Intrinsic.Control.If(V.ODBC.Con!rstBOM.EOF,=,False)
+		V.uGlobal.uConfigurator(v.Local.iRow)!sUM.Set(V.ODBC.Con!rstBOM.FieldVal!UM_Inventory)
+		V.Local.iQty.Set(V.ODBC.Con!rstBOM.FieldVal!Quantity)
+		V.uGlobal.uConfigurator(v.Local.iRow)!iQty.Set(V.Local.iQty)
+	F.Intrinsic.Control.EndIf
+	F.ODBC.Con!rstBOM.Close
+	V.uGlobal.uConfigurator(v.Local.iRow)!sSource.Set(V.Local.sChild(5))
+	'Manufactured Part
+	F.Intrinsic.Control.If(V.Local.sChild(5).Left1,=,"M")
+		F.Intrinsic.math.Sub(8,V.Local.iLevel,V.Local.sLevel)
+		F.Intrinsic.Math.Add(V.Local.iLevel,1,V.Local.iLevel)
+		F.Intrinsic.String.RPad(V.Local.iLevel,"*",V.Local.sLevel,V.Local.sLevel)
+		F.Intrinsic.String.Concat("select * from ROUTER_LINE where uCase(Router) = '",V.Local.sChild(2).UCase,"'and Router_Type='L' Order by LMO asc",V.Local.sSql)
+		F.ODBC.Connection!Con.OpenLocalRecordsetRO("rstRouter",V.Local.sSql)
+		V.Local.bLabor.Set(True)
+		F.Intrinsic.Control.DoUntil(V.odbc.Con!rstRouter.EOF,=,True)
+			V.Local.spart.Set(V.ODBC.Con!rstRouter.FieldVal!Part_WC_Outside)
+			F.Intrinsic.Control.If(V.ODBC.Con!rstRouter.FieldVal!LMO,=,"M")
+				F.Intrinsic.String.Concat("select * from BOM_MSTR where parent = '",V.Local.sChild(2),"' and Part = '",V.Local.spart,"'",V.Local.sSql)
+				F.ODBC.Connection!Con.OpenLocalRecordsetRO("rstXref",V.Local.sSql)
+				F.Intrinsic.Control.If(V.ODBC.Con!rstXref.EOF,=,True)
+					F.Intrinsic.Math.Add(V.Local.iRow,1,V.Local.iRow)
+					V.uGlobal.uConfigurator.RedimPreserve(0,V.Local.iRow)
+					V.uGlobal.uApprovers.RedimPreserve(0,V.Local.iRow)
+					V.uGlobal.uConfigurator(v.Local.iRow)!sLevel.Set(V.Local.sLevel)
+					V.uGlobal.uConfigurator(v.Local.iRow)!sPart.Set(V.Local.spart)
+					V.uGlobal.uConfigurator(v.Local.iRow)!sDescription.Set(V.ODBC.Con!rstRouter.FieldVal!Desc_RT_Line)
+					V.uGlobal.uConfigurator(v.Local.iRow)!sUM.Set(V.ODBC.Con!rstRouter.FieldVal!UM_Inventory)
+					V.uGlobal.uConfigurator(v.Local.iRow)!iLVLNO.Set(V.Local.iLevel)
+					V.uGlobal.uConfigurator(v.Local.iRow)!iQty.Set(V.ODBC.Con!rstRouter.FieldVal!Run_Time)
+					'Dist Cost
+					V.uGlobal.uConfigurator(v.Local.iRow)!sDistCost.Set("0")
+					F.Intrinsic.String.Concat("select AMT_COST, AMT_ALT_COST  from INVENTORY_MSTR where part = '",V.Local.sPart,"'",V.Local.sSql)
+					F.ODBC.Connection!Con.OpenLocalRecordsetRO("rstCost",V.Local.sSql)
+					F.Intrinsic.Control.If(V.ODBC.Con!rstCost.EOF,=,False)
+						V.uGlobal.uConfigurator(v.Local.iRow)!sDistCost.Set(V.ODBC.Con!rstCost.FieldVal!AMT_COST)
+						V.uGlobal.uApprovers(v.Local.iRow)!fPurchCost.Set(V.ODBC.Con!rstCost.FieldVal!AMT_ALT_COST)
+					F.Intrinsic.Control.EndIf
+					F.ODBC.Con!rstCost.Close
+					F.Intrinsic.Math.Mult(V.uGlobal.uConfigurator(v.Local.iRow)!iQty,V.uGlobal.uConfigurator(v.Local.iRow)!sDistCost,V.Local.fExtended1)
+					V.uGlobal.uConfigurator(v.Local.iRow)!sExtended1.Set(V.Local.fExtended1)
+					F.Intrinsic.Math.Mult(V.uGlobal.uConfigurator(v.Local.iRow)!iQty,V.uGlobal.uApprovers(v.Local.iRow)!fPurchCost,V.Local.fExtended)
+					V.uGlobal.uApprovers(v.Local.iRow)!fExtended.set(V.Local.fExtended)
+				F.Intrinsic.Control.EndIf
+				F.ODBC.Con!rstXref.Close
+			F.Intrinsic.Control.elseIf(V.ODBC.Con!rstRouter.FieldVal!LMO,=,"L")
+				F.Intrinsic.Control.If(V.Local.bLabor,=,True)
+					F.Intrinsic.Math.Add(V.Local.iRow,1,V.Local.iRow)
+					V.uGlobal.uConfigurator.RedimPreserve(0,V.Local.iRow)
+					V.uGlobal.uApprovers.RedimPreserve(0,V.Local.iRow)
+					V.uGlobal.uConfigurator(v.Local.iRow)!sLevel.Set("Labor")
+					V.uGlobal.uConfigurator(v.Local.iRow)!sPart.Set("Labor")
+					V.uGlobal.uConfigurator(v.Local.iRow)!sDescription.Set("Labor")
+					V.uGlobal.uConfigurator(v.Local.iRow)!sUM.Set(V.ODBC.Con!rstRouter.FieldVal!UM_Inventory)
+					F.Intrinsic.Control.CallSub(Labor,"sRouter",V.Local.sChild(2).UCase,"Qty",V.Local.iQty)
+					V.uGlobal.uConfigurator(v.Local.iRow)!iQty.Set(V.Args.fHrs)
+					V.uGlobal.uConfigurator(v.Local.iRow)!sExtended1.Set(V.Args.fLabor)
+					V.uGlobal.uConfigurator(v.Local.iRow)!iLVLNO.Set(V.Local.iLevel)
+				F.Intrinsic.Control.EndIf
+				V.Local.bLabor.Set(False)
+			F.Intrinsic.Control.EndIf
+			F.ODBC.Con!rstRouter.MoveNext
+		F.Intrinsic.Control.Loop
+		F.ODBC.Con!rstRouter.Close
+	F.Intrinsic.Control.Else
+		V.uGlobal.uConfigurator(v.Local.iRow)!sDistCost.Set("0")
+		F.Intrinsic.String.Concat("select AMT_COST, AMT_ALT_COST from INVENTORY_MSTR where part = '",V.Local.sChild(2),"'",V.Local.sSql)
+		F.ODBC.Connection!Con.OpenLocalRecordsetRO("rstCost",V.Local.sSql)
+		F.Intrinsic.Control.If(V.ODBC.Con!rstCost.EOF,=,False)
+			V.uGlobal.uConfigurator(v.Local.iRow)!sDistCost.Set(V.ODBC.Con!rstCost.FieldVal!AMT_COST)
+			V.uGlobal.uApprovers(v.Local.iRow)!fPurchCost.Set(V.ODBC.Con!rstCost.FieldVal!AMT_ALT_COST)
+		F.Intrinsic.Control.EndIf
+		F.ODBC.Con!rstCost.Close
+		F.Intrinsic.Math.Mult(V.uGlobal.uConfigurator(v.Local.iRow)!iQty,V.uGlobal.uConfigurator(v.Local.iRow)!sDistCost,V.Local.fExtended1)
+		V.uGlobal.uConfigurator(v.Local.iRow)!sExtended1.Set(V.Local.fExtended1)
+		F.Intrinsic.Math.Mult(V.uGlobal.uConfigurator(v.Local.iRow)!iQty,V.uGlobal.uApprovers(v.Local.iRow)!fPurchCost,V.Local.fExtended)
+		V.uGlobal.uApprovers(v.Local.iRow)!fExtended.set(V.Local.fExtended)
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Math.Add(V.Local.iRow,1,V.Local.iRow)
+F.Intrinsic.Control.Next(V.Local.iBOMLine)
+
+F.Intrinsic.Control.CallSub(Load)
+
+F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.Label("Gen_Config_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: ATG_Pricing_Configurator.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.Gen_Config.End
+
+
+Program.Sub.Load.Start
+V.Local.sError.Declare(String)
+V.Local.bModified.Declare(Boolean,False)
+V.Local.fExtended.Declare
+V.Local.iCt.Declare
+V.Local.iRows.Declare
+V.Local.iTotRows.Declare
+V.Local.sMrkUp.Declare
+V.Local.sPart.Declare
+V.Local.sRet.Declare
+V.Local.sSource.Declare
+V.Local.sSql.Declare
+
+F.Intrinsic.Control.SetErrorHandler("Load_Err")
+F.Intrinsic.Control.ClearErrors
+
+'Load Configurator
+Gui.F_PrConfig.gsfgConfig.LoadFromUDT("uGlobal.uConfigurator","sLevel*!*sPart*!*sDescription*!*sUM*!*iQty*!*sDistCost*!*sExtended1*!*sSubTot*!*sMarkUp*!*sExtended2*!*sSource*!*iLVLNO",2)
+'Load Group Cost and Extended Info.
+Gui.F_PrConfig.gsfgGroup.LoadFromUDT("uGlobal.uApprovers","fPurchCost*!*fExtended",2)
+
+'Set Styles & Markup% On Configurator
+F.Intrinsic.Debug.SetLA("Set Styles & Markup% On Configurator")
+V.Local.iRows.Set(V.Screen.F_PrConfig!gsfgConfig.Rows)
+F.Intrinsic.Math.Sub(V.Local.iRows,1,V.Local.iRows)
+F.Intrinsic.Control.For(V.Local.iCt,1,V.Local.iRows,1)
+	Gui.F_PrConfig.gsfgConfig.GetTextMatrix(10,V.Local.iCt,V.Local.sSource)
+	F.Intrinsic.Control.If(V.Local.sSource.Left1,=,"M")
+		'Manufacturing Components list
+		F.Intrinsic.Control.if(V.Global.sMFGComps.Trim,=,"")
+			V.Global.sMFGComps.Set(V.Local.iCt)
+		F.Intrinsic.Control.Else
+			F.Intrinsic.String.Concat(V.Global.sMFGComps,"*!*",V.Local.iCt,V.Global.sMFGComps)
+		F.Intrinsic.Control.EndIf
+		
+		Gui.F_PrConfig.gsfgConfig.ApplyStyle(V.Local.iCt,3)
+		Gui.F_PrConfig.gsfgConfig.GetTextMatrix(1,V.Local.iCt,V.Local.sPart)
+		F.Intrinsic.string.Concat("select * from ATG_3329_QTE_PRCNG_MARKUP where Quote_No = '",V.Global.sQuote,"' and Line = '",V.Global.sLine,"' and Parent = '",V.Global.sPart,"' and Part = '",V.Local.sPart,"' and Row = '",V.Local.iCt,"'",V.Local.sSql)
+		F.ODBC.Connection!Con.OpenLocalRecordsetRO("rstMrkp",V.Local.sSql)
+		F.Intrinsic.Control.If(V.ODBC.Con!rstMrkp.EOF,=,False)
+			F.Intrinsic.String.Concat(V.ODBC.Con!rstMrkp.FieldVal!Markups,"%",V.Local.sMrkUp)
+'F.Intrinsic.UI.Msgbox(V.Local.sMrkUp,V.Local.sPart)
+			Gui.F_PrConfig.gsfgConfig.TextMatrix(8,V.Local.iCt,V.Local.sMrkUp)
+		F.Intrinsic.Control.Else
+			V.Local.bModified.Set(True)
+		F.Intrinsic.Control.EndIf
+		F.ODBC.Con!rstMrkp.Close
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Next(V.Local.iCt)
+
+'Check If the BOM has been modified by comparing # of Rows
+F.Intrinsic.Control.If(V.Local.bModified,=,False)
+F.Intrinsic.String.Concat("select * from ATG_3329_QTE_PRCNG_CONFIG where Quote_No = '",V.Global.sQuote,"' and Line = '",V.Global.sLine,"'",V.Local.sSql)
+F.ODBC.Connection!Con.OpenLocalRecordsetRO("rstRows",V.Local.sSql)
+F.Intrinsic.Control.If(V.ODBC.Con!rstRows.EOF,=,False)
+	F.Intrinsic.Math.Add(V.uGlobal.uConfigurator.UBound,1,V.Local.iTotRows)
+	F.Intrinsic.Control.If(V.ODBC.Con!rstRows.FieldVal!Total_Rows,<>,V.Local.iTotRows)
+		V.Local.bModified.Set(True)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+F.ODBC.Con!rstRows.Close
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Debug.SetLA("V.Local.bModified = True, if BOM has been modified, & Markups will be Reset to 30%")
+F.Intrinsic.Control.If(V.Local.bModified,=,True)
+	F.Intrinsic.Control.For(V.Local.iCt,1,V.Local.iRows,1)
+		Gui.F_PrConfig.gsfgConfig.GetTextMatrix(10,V.Local.iCt,V.Local.sSource)
+		F.Intrinsic.Control.If(V.Local.sSource.Left1,=,"M")
+			Gui.F_PrConfig.gsfgConfig.TextMatrix(8,V.Local.iCt,"30%")
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.Next(V.Local.iCt)
+F.Intrinsic.Control.EndIf
+
+'Calculate SubTotal
+F.Intrinsic.Control.CallSub(Subtotal)
+
+V.Local.iRows.Set(V.Screen.F_PrConfig!gsfgGroup.Rows)
+F.Intrinsic.Math.Sub(V.Local.iRows,1,V.Local.iRows)
+'Get total of Extended
+F.Intrinsic.Control.For(V.Local.iCt,1,V.Local.iRows,1)
+	Gui.F_PrConfig.gsfgGroup.GetTextMatrix(1,V.Local.iCt,V.local.fExtended)
+	F.Intrinsic.Math.Add(V.Local.fExtended,V.Global.fExtended,V.Global.fExtended)
+F.Intrinsic.Control.Next(V.Local.iCt)
+Gui.F_PrConfig.lblGrpTot.Caption(V.Global.fExtended)
+
+'Calculate GP
+F.Intrinsic.Control.CallSub(Grossprofit)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Load_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: ATG_Pricing_Configurator.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.Load.End
+
+
+program.sub.gsfgconfig_posttextmatrix.start
+V.Local.sError.Declare(String)
+V.Local.fExt2.Declare
+V.Local.fMrkUp.Declare
+V.Local.fSubTot.Declare
+V.Local.iColumn.Declare
+V.Local.iKey.Declare
+V.Local.iOccurs.Declare
+V.Local.iQty.Declare
+V.Local.sText.Declare
+
+F.Intrinsic.Control.SetErrorHandler("gsfgconfig_posttextmatrix_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.iColumn.Set(V.Args.Column)
+V.Local.iKey.Set(V.Args.key)
+
+'Calculate Extended2 if Markup% is changed
+F.Intrinsic.Control.If(V.Local.iColumn,=,8)
+	V.Local.sText.Set(V.Args.Text)
+	'Format Markup %
+	F.Intrinsic.String.Occurs(V.Local.sText,"%",V.Local.iOccurs)
+	F.Intrinsic.Control.If(V.Local.iOccurs,=,0)
+		F.Intrinsic.String.Concat(V.Local.sText,"%",V.Local.sText)
+		Gui.F_PrConfig.gsfgConfig.TextMatrix(V.Local.iColumn,V.Local.iKey,V.Local.sText)
+	F.Intrinsic.Control.EndIf
+	'ReCalculate Extended2 If Markup is changed
+	F.Intrinsic.Control.CallSub(Extended2,"Row",V.Local.iKey)
+	'Set Total Variable
+	F.Intrinsic.Control.CallSub(Total)
+	
+'Calculate Markup% if Extended2 is changed
+F.Intrinsic.Control.ElseIf(V.Local.iColumn,=,9)
+
+	V.Local.fExt2.Set(V.Args.Text)
+	Gui.F_PrConfig.gsfgConfig.GetTextMatrix(4,V.Local.iKey,V.Local.iQty)
+	Gui.F_PrConfig.gsfgConfig.GetTextMatrix(7,V.Local.iKey,V.Local.fSubTot)
+
+	'Calculate Markup, If Extended2 is changed
+	'Markup = (((Extended/Qty) - Subtotal) /Subtotal1 )*100
+	F.Intrinsic.Math.Div(V.Local.fExt2,V.Local.iQty,V.Local.fMrkUp)
+	F.Intrinsic.Math.Sub(V.Local.fMrkUp,V.Local.fSubTot,V.Local.fMrkUp)
+	F.Intrinsic.Math.Div(V.Local.fMrkUp,V.Local.fSubTot,V.Local.fMrkUp)
+	F.Intrinsic.Math.Mult(V.Local.fMrkUp,100,V.Local.fMrkUp)
+	
+	F.Intrinsic.String.Concat(V.Local.fMrkUp.Format.00,"%",V.Local.sText)
+	Gui.F_PrConfig.gsfgConfig.TextMatrix(8,V.Local.iKey,V.Local.sText)
+	
+	F.Intrinsic.Control.CallSub(Total)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("gsfgconfig_posttextmatrix_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: ATG_Pricing_Configurator.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.gsfgconfig_posttextmatrix.end
+
+
+Program.Sub.SubTotal.Start
+V.Local.sError.Declare(String)
+V.Local.iCt.Declare
+V.Local.iLevel.Declare
+V.Local.sMFGComp.Declare
+
+F.Intrinsic.Control.SetErrorHandler("SubTotal_Err")
+F.Intrinsic.Control.ClearErrors
+
+'List of all Row# with Manufacturing parts
+F.Intrinsic.String.Split(V.Global.sMFGComps,"*!*",V.Local.sMFGComp)
+F.Intrinsic.Control.For(V.Local.iCt,0,V.Local.sMFGComp.UBound,1)
+	Gui.F_PrConfig.gsfgConfig.GetTextMatrix(11,V.Local.sMFGComp(v.Local.iCt),V.Local.iLevel)
+	'Calculate SubTotal
+	F.Intrinsic.Control.CallSub(Nxtmfg_comp,"Level",V.Local.iLevel,"CurrentRow",V.Local.sMFGComp(v.Local.iCt))
+	Gui.F_PrConfig.gsfgConfig.TextMatrix(7,V.Local.sMFGComp(v.Local.iCt),V.Args.fSubTot)
+	'Calculate Extended 2
+	F.Intrinsic.Control.CallSub(Extended2,"Row",V.Local.sMFGComp(v.Local.iCt))
+F.Intrinsic.Control.Next(V.Local.iCt)
+
+F.Intrinsic.Control.CallSub(Total)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("SubTotal_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: ATG_Pricing_Configurator.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.SubTotal.End
+
+
+Program.Sub.NXTMFG_Comp.Start
+V.Local.sError.Declare(String)
+V.Local.fSubTot.Declare(Float)
+V.Local.fTemp.Declare
+V.Local.iCt.Declare
+V.Local.iCurrentRow.Declare
+V.Local.iCurrentLevel.Declare
+V.Local.iLevel.Declare
+V.Local.iReqLvl.Declare
+V.Local.iRows.Declare
+V.Local.sSource.Declare
+
+F.Intrinsic.Control.SetErrorHandler("NXTMFG_Comp_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.iLevel.set(V.Args.level)
+V.Local.iCurrentRow.set(V.Args.CurrentRow)
+'Start counting totals from the Row next to the Current Row
+F.Intrinsic.Math.Add(V.Local.iCurrentRow,1,V.Local.iCurrentRow)
+'Required level is 1 greater than current level
+F.Intrinsic.Math.Add(V.Local.iLevel,1,V.Local.iReqLvl)
+V.Local.iRows.Set(V.Screen.F_PrConfig!gsfgConfig.Rows)
+F.Intrinsic.Math.Sub(V.Local.iRows,1,V.Local.iRows)
+
+'For the current level, loop through Grid to find the next row with same level
+'Add labor & all purchasing parts price to get the SubTotal.
+F.Intrinsic.Control.For(V.Local.iCt,V.Local.iCurrentRow,V.Local.iRows,1)
+	Gui.F_PrConfig.gsfgConfig.GetTextMatrix(11,V.Local.iCt,V.Local.iCurrentLevel)
+	F.Intrinsic.Control.If(V.Local.iCurrentLevel,=,V.Local.iLevel)
+		F.Intrinsic.Variable.AddRV("fSubTot",V.Local.fSubTot)
+		F.Intrinsic.Control.ExitFor(V.Local.iCt)
+	F.Intrinsic.Control.EndIf
+	
+	Gui.F_PrConfig.gsfgConfig.GetTextMatrix(10,V.Local.iCt,V.Local.sSource)
+	Gui.F_PrConfig.gsfgConfig.GetTextMatrix(6,V.Local.iCt,V.Local.fTemp)
+	F.Intrinsic.Control.If(V.Local.iCurrentLevel,=,V.Local.iReqLvl)
+	F.Intrinsic.Control.AndIf(V.Local.sSource.Left1,<>,"M")
+		F.Intrinsic.Math.Add(V.Local.fSubTot,V.Local.fTemp,V.Local.fSubTot)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Next(V.Local.iCt)
+
+F.Intrinsic.Variable.AddRV("fSubTot",V.Local.fSubTot)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("NXTMFG_Comp_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: ATG_Pricing_Configurator.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.NXTMFG_Comp.End
+
+
+Program.Sub.Extended2.Start
+V.Local.sError.Declare(String)
+V.Local.fExtended.Declare
+V.Local.fMrkUp.Declare
+V.Local.fSubTot.Declare
+V.Local.iQty.Declare
+V.Local.iRow.Declare
+V.Local.sTemp.Declare
+
+F.Intrinsic.Control.SetErrorHandler("Extended2_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.iRow.Set(V.Args.Row)
+Gui.F_PrConfig.gsfgConfig.GetTextMatrix(4,V.Local.iRow,V.Local.iQty)
+Gui.F_PrConfig.gsfgConfig.GetTextMatrix(7,V.Local.iRow,V.Local.fSubTot)
+Gui.F_PrConfig.gsfgConfig.GetTextMatrix(8,V.Local.iRow,V.Local.sTemp)
+F.Intrinsic.String.Replace(V.Local.sTemp,"%","",V.Local.fMrkUp)
+'Calculate Extended 2; Extended2 = (Subtotal + Subtotal * Markup/100) * Quantity
+F.Intrinsic.Math.Div(V.Local.fMrkUp,100,V.Local.fExtended)
+F.Intrinsic.Math.Mult(V.Local.fExtended,V.Local.fSubTot,V.Local.fExtended)
+F.Intrinsic.Math.Add(V.Local.fExtended,V.Local.fSubTot,V.Local.fExtended)
+F.Intrinsic.Math.Mult(V.Local.fExtended,V.Local.iQty,V.Local.fExtended)
+
+Gui.F_PrConfig.gsfgConfig.TextMatrix(9,V.Local.iRow,V.Local.fExtended)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Extended2_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: ATG_Pricing_Configurator.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.Extended2.End
+
+
+Program.Sub.Total.Start
+V.Local.sError.Declare(String)
+V.Local.fMrkUp.Declare
+V.Local.iCt.Declare
+V.Local.sMFGComp.Declare
+
+F.Intrinsic.Control.SetErrorHandler("Total_Err")
+F.Intrinsic.Control.ClearErrors
+
+'Calculate Total Of the Extended 2
+V.Global.fTotal.Set(0)
+F.Intrinsic.String.Split(V.Global.sMFGComps,"*!*",V.Local.sMFGComp)
+F.Intrinsic.Control.For(V.Local.iCt,0,V.Local.sMFGComp.UBound,1)
+	Gui.F_PrConfig.gsfgConfig.GetTextMatrix(9,V.Local.sMFGComp(v.Local.iCt),V.Local.fMrkUp)
+	F.Intrinsic.Math.Add(V.GLobal.fTotal,V.Local.fMrkUp,V.GLobal.fTotal)
+F.Intrinsic.Control.next(V.Local.iCt)
+
+'Set the Total in the Caption
+Gui.F_PrConfig.lblTot.Caption(V.GLobal.fTotal)
+'Calculate GP
+F.Intrinsic.Control.CallSub(Grossprofit)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Total_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: ATG_Pricing_Configurator.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.Total.End
+
+
+Program.Sub.GrossProfit.Start
+V.Local.sError.Declare(String)
+V.Local.fGP.Declare
+V.Local.sGP.Declare
+
+F.Intrinsic.Control.SetErrorHandler("GrossProfit_Err")
+F.Intrinsic.Control.ClearErrors
+
+'Calculate Gross Profit
+F.Intrinsic.Control.If(V.Global.fExtended,<>,0)
+	F.Intrinsic.Math.Div(V.Global.fTotal,V.Global.fExtended,V.Local.fGP)
+	F.Intrinsic.Math.Sub(V.Local.fGP,1,V.Local.fGP)
+	F.Intrinsic.Math.Mult(V.Local.fGP,100,V.Local.fGP)
+	F.Intrinsic.String.Concat(V.Local.fGP.Format.00,"%",V.Local.sGP)
+	Gui.F_PrConfig.lblGPTOT.Caption(V.Local.sGP)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("GrossProfit_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: ATG_Pricing_Configurator.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.GrossProfit.End
+
+
+Program.Sub.Labor.Start
+'Calculate the Summary of Labor steps.
+V.Local.sError.Declare(String)
+V.Local.iQty.Declare
+V.Local.fHrs.Declare
+V.Local.fLaborCost.Declare
+V.Local.fRunTime.Declare
+V.Local.fsetup.Declare
+V.Local.fWCCost.Declare
+V.Local.fWCHrs.Declare
+V.Local.sSql.Declare
+
+F.Intrinsic.Control.SetErrorHandler("Labor_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.iQty.Set(V.Args.Qty)
+
+F.Intrinsic.Debug.SetLA("Labor Calculated @ Hours / piece")
+F.Intrinsic.String.Concat("select * from ROUTER_LINE where uCase(Router) = '",V.Args.sRouter,"' and Router_Type = 'L' and LMO = 'L'",V.Local.sSql)
+F.ODBC.Connection!Con.OpenLocalRecordsetRO("rstLabor",V.Local.sSql)
+F.Intrinsic.Control.DoUntil(V.ODBC.Con!rstLabor.EOF,=,True)
+	'---Hours Per Piece---
+	'Set up Cost
+	V.Local.fsetup.Set(V.ODBC.Con!rstLabor.FieldVal!Set_Up)
+	'Total Runtime for iQty pieces
+	F.Intrinsic.Math.Mult(V.Local.iQty,V.ODBC.Con!rstLabor.FieldVal!Run_Time,V.Local.fRunTime)
+	'Total Time
+	F.Intrinsic.Math.Add(V.Local.fsetup,V.Local.fRunTime,V.Local.fWCHrs)
+	'Cost Per WC
+	F.Intrinsic.Math.Mult(V.Local.fWCHrs,V.ODBC.Con!rstLabor.FieldVal!Rate,V.Local.fWCCost)
+	'total time & Cost per all WCs
+	F.Intrinsic.Math.Add(V.Local.fHrs,V.Local.fWCHrs,V.Local.fHrs)
+	F.Intrinsic.Math.Add(V.Local.fWCCost,V.Local.fLaborCost,V.Local.fLaborCost)
+	F.ODBC.Con!rstLabor.MoveNext
+F.Intrinsic.Control.Loop
+F.ODBC.Con!rstLabor.Close
+
+F.Intrinsic.Variable.AddRV("fHrs",V.Local.fHrs.Format.00)
+F.Intrinsic.Variable.AddRV("fLabor",V.Local.fLaborCost)
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Labor_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: ATG_Pricing_Configurator.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.Labor.End
+
+
+program.sub.gsfgconfig_cellenter.start
+V.Local.sError.Declare(String)
+V.Local.iKey.Declare
+
+F.Intrinsic.Control.SetErrorHandler("gsfgconfig_cellenter_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.iKey.Set(V.Args.Key)
+Gui.F_PrConfig.gsfgGroup.SetActiveCell(0,V.Local.iKey)
+Gui.F_PrConfig.gsfgGroup.ApplyStyle(V.Local.iKey,3)
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("gsfgconfig_cellenter_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: ATG_Pricing_Configurator.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.gsfgconfig_cellenter.end
+
+
+program.sub.gsfgconfig_cellexit.start
+V.Local.sError.Declare(String)
+V.Local.iKey.Declare
+
+F.Intrinsic.Control.SetErrorHandler("gsfgconfig_cellexit_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.iKey.Set(V.Args.Key)
+Gui.F_PrConfig.gsfgGroup.RemoveStyle(V.Local.iKey)
+Gui.F_PrConfig.gsfgGroup.ApplyStyle(V.Local.iKey,2)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("gsfgconfig_cellexit_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: ATG_Pricing_Configurator.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.gsfgconfig_cellexit.end
+
+
+Program.Sub.Comments.Start
+${$0$}$ATG_Pricing_Configurator.gas$}$CHANDANA$}$12/3/2012
+${$1$}$$}$$}$1$}$10670$}$Script 1 Hook$}$12/3/2012 2:46:48 PM$}$(Program: QTE201; Screen: QTS0201L)
+Quote Lines Screen, Script 1 button.
+${$1$}$$}$$}$0$}$10260$}$Populate Hook$}$12/3/2012 12:39:25 PM$}$Program: QTE201
+Screen: QTS0201L
+Path: Quote Lines screen
+${$3$}$0$}$$}$-1$}$-1$}$$}$1/1/1900$}$Quote Number 4046
+Customer Name Accurate Control Co LLC
+Reference Number ACC730-82720120909-0
+Title Pricing Configurator - Accurate control
+
+Description This script will build a flex grid from BOM part details and calculate Gross Profit.
+
+Specification Editable Part Number Grid
+
+On screen: QTS0201L – Quote Line Items from Open Quote Header Maintenance.
+Rename "Script 1" button ID:000201 to ESTIMATE
+
+ESTIMATE instances a form containing a flex grid. Generally there will be two states of this grid. One for general users and one for users that are members of the "Quote Approvers" group.
+
+General Users:
+10 Cells Wide
+
+1. LEVEL – BOM_MSTR (Will be calculated based on the depth of the recursive call)
+2. PART NUMBER – BOM_MSTR!PART
+3. DESCRIPTION – BOM_ENG!DESCRIPTION
+4. UM – BOM_MSTR!UM_INVENTORY
+5. QTY – BOM_MSTR!QUANTITY
+
+6. "Dist Cost" = AMT_COST from INVENTORY_MSTR
+7. "Extended 1" = Qty * Dist Cost
+
+The following three cells will be used if the Part Number is a MFG Component Level
+8. Subtotal – Summerizes the total for the pieces of the MFG Component
+9. Markup – This cell is initially set to 30%, its background is light yellow. The customer can type in a percentage however the default will be 30% if no over-riding value is entered.
+10. Extended 2 – The result of the subtotal + (subtotal * Markup), its background color is mint green. If a user manually enters a sum into Extended 2 the flex grid will calculate the associated markup percentage to achieve that total. Markup = 1 - (Extended2 / Subtotal).
+
+For rows that are not the MFG Component Part, the cells in columns Subtotal, Markup and Extended will be locked and their background color is dark grey.
+
+Background colors for flex grids can be altered by incorporating the buildstyle function.
+Gui.Formname.GSFlexgridname.BuildStyle(style, column, property, args, value)
+i.e.Gui.Formname.GSFlexgridname.BuildStyle(1,3,"color","back",v.color.green)
+
+Rows: Each row section starts with te MFG Part followed by its pieces, once those are listed out a "Labor" row will need to be added for this part. Summary of total hours for labor operations, router might have several WC, this row needs to be the summary of all those estimated hours and the Extended 1 Value, should be the total of estimated dollars for all the operations. This is a sum of all labor for all sequences for a listed BOM. For MFG components, DIST COST and EXTENDED 1 will be always Zero.
+
+Total: A label under the flex grid that is the sum of all data in the Extended 2 column.
+
+Totals will be recalculated once a user alters a cell's data and leaves that cell by Tab or Mouse click.
+
+A new custom table QUOTE_PRICING_MARKUPS
+Columns:
+QUOTE_NO Char(7)
+LINE_NO Char(4)
+ROW Char(4)
+MARKUPS Float
+A new custom table QUOTE_PRICING _CONFIGURATOR
+Columns:
+QUOTE_NO Char(7)
+LINE_NO Char(4)
+TOTAL_ROWS LongInt
+
+Buttons
+PRINT: Will generate a Excel spreadsheet, with a naming structure of QuoteLineTimestamp.xls and save it to \\Global\FILES
+SAVE: The total will be populated back to the Quote Lines Screen: QTS0201L to two separate places , User Field 1: 000030 and Price USD: 000010
+
+Save will also store the quote number, line number, row number of each row containing a markup, and the markup percentage to QUOTE_PRICING_MARKUPS
+
+Save will also store the quote number, line number and the total number of rows in the grid to QUOTE_PRICING_CONFIGURATOR
+
+Please Note: If the BOM from the pricing grid is altered in any way after it has been saved at the pricing grid, then when a user recalls the quote into the pricing grid the rows of data will not match and the markups that have been stored will not be accurate. The script will check for changes, if changes have been made that alter the row count in the pricing grid from the last time it was saved, the script will reset the markups to their default of 30%.
+
+If you require that the script logic must retain the markups even after the number of rows in the pricing grid has changed due to an alteration in the BOM, Global Shop will need to generate a new quote to include this feature.
+
+Quote Approvers
+
+If the user is a member of the "Quote Approvers" group the ESTIMATE button on the Quote Line Items screen will instance a flex grid with two addition columns for a total of 12.
+
+The two additional columns should be to the right of and should be spaced apart from the Extended 2 column.
+
+11. Purch Cost – Information pulled from INVENTORY_MSTR!AMT_ALT_COST
+12. Extended – Qty * Purch Cost
+
+Total – Not re-labeled as such but a continuation of the Total line in the General User View. This label will hold the sum for the Extend column (Column Number 12).
+
+(GP) Gross Profit – A label below the dollar total in the Extend column.
+This percentage calculation: (Extended 2 Sum/Extended Sum) – 1.0
+
+
+Deliverables ATG-PRICING_CONFIGURATOR_WITH_GP.GAS
+Table: QUOTE_PRICING_MARKUPS
+Table: QUOTE_PRICING_CONFIGURATOR
+Program.Sub.Comments.End
+
